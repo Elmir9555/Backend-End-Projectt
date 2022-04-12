@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Microsoft.EntityFrameworkCore" />
+    <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+    <None Remove="Models\" />
+    <None Remove="Controllers\" />
+    <None Remove="Datas\" />
+    <None Remove="Views\" />
+    <None Remove="Configurations\" />
+    <None Remove="Repository\" />
+    <None Remove="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.23">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.23">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.23" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Datas\" />
+    <Folder Include="Views\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Repository\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+</Project>
