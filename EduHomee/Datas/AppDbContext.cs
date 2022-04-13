@@ -1,5 +1,4 @@
 ﻿using System;
-using EduHomee.Configurations;
 using EduHomee.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,13 +10,13 @@ namespace EduHomee.Datas
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.ApplyConfiguration(new CourseConfigurations());
-            modelBuilder.ApplyConfiguration(new EventTeacherConfiguration());
-            modelBuilder.ApplyConfiguration(new TeacherSkillConfiguration());
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.ApplyConfiguration(new CourseConfigurations());
+        //    modelBuilder.ApplyConfiguration(new EventTeacherConfiguration());
+        //    modelBuilder.ApplyConfiguration(new TeacherSkillConfiguration());
 
-        }
+        //}
 
         public DbSet<About> Abouts { get; set; }
         public DbSet<BioTable> BioTables { get; set; }

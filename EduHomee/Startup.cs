@@ -52,6 +52,10 @@ namespace EduHomee
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "DefaultArea",
+                    pattern: "{area:exists}/{Controller=AdminPanel}/{action=index}/{id?}"
+                    );
                 endpoints.MapDefaultControllerRoute();
             });
         }

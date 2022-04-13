@@ -253,10 +253,9 @@ namespace EduHomee.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TeacherId");
+                    b.HasIndex("EventId");
 
-                    b.HasIndex("EventId", "TeacherId")
-                        .IsUnique();
+                    b.HasIndex("TeacherId");
 
                     b.ToTable("EventTeachers");
                 });
@@ -329,6 +328,9 @@ namespace EduHomee.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IsDelete")
@@ -441,10 +443,9 @@ namespace EduHomee.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TeacherId");
+                    b.HasIndex("SkillId");
 
-                    b.HasIndex("SkillId", "TeacherId")
-                        .IsUnique();
+                    b.HasIndex("TeacherId");
 
                     b.ToTable("TeacherSkills");
                 });

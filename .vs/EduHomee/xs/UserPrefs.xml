@@ -1,22 +1,39 @@
 ﻿<Properties StartupConfiguration="{F920991C-8FA9-4BCB-BFD5-EF938929A489}|Default">
   <MonoDevelop.Ide.ItemProperties.EduHomee PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="EduHomee/Configurations/CourseConfiguration.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EduHomee/Models/Slider.cs">
     <Files>
-      <File FileName="EduHomee/Datas/AppDbContext.cs" Line="38" Column="53" />
-      <File FileName="EduHomee/Models/NoticeBoard.cs" />
-      <File FileName="EduHomee/Models/Testimonial.cs" />
-      <File FileName="EduHomee/Startup.cs" Line="1" Column="1" />
-      <File FileName="EduHomee/Configurations/CourseConfiguration.cs" Line="1" Column="1" />
+      <File FileName="EduHomee/Areas/Admin/Views/AdminPanel/Index.cshtml" Line="34" Column="1" />
+      <File FileName="EduHomee/Areas/Admin/Views/_ViewImports.cshtml" Line="4" Column="1" />
+      <File FileName="EduHomee/Models/Slider.cs" Line="12" Column="1" />
+      <File FileName="EduHomee/Areas/Admin/Controllers/SliderController.cs" Line="21" Column="32" />
+      <File FileName="EduHomee/Areas/Admin/Views/Shared/_AdminLayout.cshtml" Line="221" Column="26" />
+      <File FileName="EduHomee/Areas/Admin/Views/Slider/Index.cshtml" Line="1" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="EduHomee" expanded="True">
             <Node name="EduHomee" expanded="True">
-              <Node name="Configurations" expanded="True">
-                <Node name="CourseConfiguration.cs" selected="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="Shared" expanded="True" />
+                    <Node name="Slider" expanded="True" />
+                  </Node>
+                </Node>
               </Node>
-              <Node name="Datas" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Slider.cs" selected="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="pages" expanded="True">
+                    <Node name="charts" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>

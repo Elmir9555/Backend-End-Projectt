@@ -1,0 +1,32 @@
+﻿@using EduHomee.Models
+@model List<Slider>
+
+<h3 style="text-align: center">Slider</h3>
+
+<a asp-action="Create" asp-controller="Slider" asp-area="Admin" class="btn btn-primary" style="float: right">Slider</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title :</th>
+            <th>Description :</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td>@(i+1)</td>
+                <td>@Model[i].Title</td>
+                <td>@Model[i].Description</td>
+                <td>
+                    <a asp-action="Update" asp-controller="Slider" asp-area="Admin" asp-route-id="@Model[i].Id">Update</a>
+                    <a asp-action="Delete" asp-controller="Slider" asp-area="Admin" asp-route-id="@Model[i].Id">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
