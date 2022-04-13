@@ -1,32 +1,77 @@
-﻿@using EduHomee.Models
+﻿
+@using EduHomee.Models
 @model List<Slider>
+@{
+    int count = 1;
+    Layout = "_AdminLayout";
+}
 
-<h3 style="text-align: center">Slider</h3>
+<div class="container">
+    <div class="row">
+        <div class="header d-flex justify-content-between mt-3">
+            <h3>Categories</h3>
+            <div>
+                <a class="btn btn-success" asp-action="Create">Create</a>
+            </div>
+        </div>
 
-<a asp-action="Create" asp-controller="Slider" asp-area="Admin" class="btn btn-primary" style="float: right">Slider</a>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            Number
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Image
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Settings
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var slid in Model)
+                    {
+                    <tr>
+                        <td>
+                            @count
+                        </td>
+                        <td>
+                            @slid.Title
+                        </td>
+                        <td>
+                            @slid.Image
+                        </td>
+                        <td>
+                            @slid.Description
+                        </td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" asp-action="Detail" asp-route-id="@slid.Id">
+                                <i class="mdi mdi-account-box-outline"></i>
+                            </a>
+                            <a class="btn btn-warning btn-sm" asp-action="Update" asp-route-id="@slid.Id">
+                                <i class="mdi mdi-table-edit"></i>
+                            </a>
+                            <form style="display:inline-block" method="post" asp-action="Delete" asp-route-id="@slid.Id">
+                                <button class="btn btn-danger btn-sm" type="submit">
+                                    <i class="mdi mdi-delete-forever"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                        count++;
+                    }
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Title :</th>
-            <th>Description :</th>
-        </tr>
-    </thead>
-    <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-        @for (int i = 0; i < Model.Count; i++)
-        {
-            <tr>
-                <td>@(i+1)</td>
-                <td>@Model[i].Title</td>
-                <td>@Model[i].Description</td>
-                <td>
-                    <a asp-action="Update" asp-controller="Slider" asp-area="Admin" asp-route-id="@Model[i].Id">Update</a>
-                    <a asp-action="Delete" asp-controller="Slider" asp-area="Admin" asp-route-id="@Model[i].Id">Delete</a>
-                </td>
-            </tr>
-        }
-
-    </tbody>
-</table>
+</div>

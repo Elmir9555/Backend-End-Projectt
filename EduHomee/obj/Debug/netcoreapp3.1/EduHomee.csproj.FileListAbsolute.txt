@@ -82,3 +82,6 @@
 /Users/elmirustayev/Desktop/EduHomee/EduHomee/obj/Debug/netcoreapp3.1/EduHomee.genruntimeconfig.cache
 /Users/elmirustayev/Desktop/EduHomee/EduHomee/obj/Debug/netcoreapp3.1/EduHomee.csproj.AssemblyReference.cache
 /Users/elmirustayev/Desktop/EduHomee/EduHomee/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Index.cshtml.g.cs
+/Users/elmirustayev/Desktop/EduHomee/EduHomee/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Create.cshtml.g.cs
+/Users/elmirustayev/Desktop/EduHomee/EduHomee/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Detail.cshtml.g.cs
+/Users/elmirustayev/Desktop/EduHomee/EduHomee/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Slider/Update.cshtml.g.cs

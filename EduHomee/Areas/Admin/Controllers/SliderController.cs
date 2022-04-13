@@ -23,9 +23,61 @@ namespace EduHomee.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index()
         {
-            List<Slider> sliders = await _context.Sliders.ToListAsync();
+            List<Slider> sliders = await _context.Sliders.Where(m => !m.IsDelete).ToListAsync();
 
             return View(sliders);
         }
+
+        public IActionResult Create()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+      
+        public async Task<IActionResult> Create(Slider slider)
+        {
+
+            await _context.Sliders.AddAsync(slider);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", "Slider", new { area = "Admin" });
+
+        }
+
+        public async Task<IActionResult> Update(int id)
+        {
+           var slider= await _context.Sliders.FindAsync(id);
+            return View(slider);
+
+        }
+
+        [HttpPost]
+        public IActionResult Update(Slider slider)
+        {
+            _context.Sliders.Update(slider);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Slider", new { area = "Admin" });
+        }
+
+
+
+        public  IActionResult Delete(int id)
+        {
+            var slider =  _context.Sliders.Find(id);
+            _context.Sliders.Remove(slider);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Slider", new { area = "Admin" });
+        }
+
+        public async Task<IActionResult> Detail(int id)
+        {
+            var slider = await _context.Sliders.FindAsync(id);
+            return View(slider);
+        }
+
+
+
+
     }
 }
