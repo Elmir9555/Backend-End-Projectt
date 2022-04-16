@@ -1,0 +1,27 @@
+﻿@using EduHomee.Models
+@model NoticeBoard
+
+
+
+<div class="container mt-5">
+    <form class="forms-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div style="display:flex;justify-content:space-between">
+       
+
+            <div class="form-group">
+                <label asp-for="Date"></label>
+                <input class="form-control" style="width:300px" asp-for="Date">
+                <span class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <input class="form-control" style="width:300px" asp-for="Description">
+                <span class="text-danger"></span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>

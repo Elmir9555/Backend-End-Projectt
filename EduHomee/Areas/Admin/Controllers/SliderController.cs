@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using EduHomee.Datas;
 using EduHomee.Models;
+using EduHomee.ViewModels.Admin;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -15,10 +19,13 @@ namespace EduHomee.Areas.Admin.Controllers
     public class SliderController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IWebHostEnvironment _env;
 
-        public SliderController(AppDbContext context)
+        public SliderController(AppDbContext context,IWebHostEnvironment env)
         {
             _context = context;
+            _env = env;
+
         }
 
         public async Task<IActionResult> Index()
@@ -35,11 +42,46 @@ namespace EduHomee.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
       
-        public async Task<IActionResult> Create(Slider slider)
+        public async Task<IActionResult> Create(SliderVM sliderVM)
         {
 
-            await _context.Sliders.AddAsync(slider);
+            if (ModelState.ValidationState == ModelValidationState.Invalid) return View();
+            foreach (var photo in sliderVM.Photos)
+            {
+                if(!photo.ContentType.Contains("image/"))
+                {
+                    ModelState.AddModelError("Photos", "Image type is wrong");
+                }
+
+            }
+
+            foreach (var photo in sliderVM.Photos)
+            {
+                string fileName = Guid.NewGuid().ToString() + "_" + photo.FileName;
+                string path = Path.Combine(_env.WebRootPath, "assets/img/slider", fileName);
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    await photo.CopyToAsync(stream);
+                }
+
+                Slider slider = new Slider
+                {
+                    Image = fileName,
+                    Title = sliderVM.Title,
+                    Description = sliderVM.Desc
+
+
+                };
+                await _context.Sliders.AddAsync(slider);
+
+            }
+
+
+
+
+           
             await _context.SaveChangesAsync();
             return RedirectToAction("Index", "Slider", new { area = "Admin" });
 

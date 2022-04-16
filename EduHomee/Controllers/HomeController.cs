@@ -28,13 +28,14 @@ namespace EduHomee.Controllers
         public async Task<IActionResult> Index()
         {
             About about = await _context.Abouts.FirstOrDefaultAsync();
+            List<NoticeBoard> noticeBoards = await _context.NoticeBoards.ToListAsync();
+            List<Blog> blogs = await _context.Blogs.ToListAsync();
             List<BioTable> bioTables = await _context.BioTables.ToListAsync();
             Contact contact = await _context.Contacts.FirstOrDefaultAsync();
-            List<Course> courses = await _context.Courses.ToListAsync();
+            List<Course> courses = await _context.Courses.Include(m=>m.CourseFeatures).Include(m=>m.CourseFeatures).ToListAsync();
             List<CourseDetails> courseDetails = await _context.CourseDetails.ToListAsync();
             List<Event> events = await _context.Events.ToListAsync();
-            List<EventTeacher> eventTeachers = await _context.EventTeachers.ToListAsync();
-            NoticeBoard noticeBoard = await _context.NoticeBoards.FirstOrDefaultAsync();
+            List<EventTeacher> eventTeachers = await _context.EventTeachers.ToListAsync();           
             List<Service> services = await _context.Services.ToListAsync();
             List<Skill> skills = await _context.skills.ToListAsync();
             List<Slider> sliders = await _context.Sliders.ToListAsync();
@@ -47,17 +48,22 @@ namespace EduHomee.Controllers
 
             HomeViewModel HomeVm = new HomeViewModel
             {
+                Sliders = sliders,
+                Services = services,
                 About = about,
+                Courses = courses,
+                NoticeBoards = noticeBoards,
+                Events = events,
                 BioTables = bioTables,
                 Contact = contact,
-                Courses = courses,
+                
                 CourseDetails = courseDetails,
-                Events = events,
+               
                 EventTeachers = eventTeachers,
-                NoticeBoard = noticeBoard,
-                Services = services,
+               
+              
                 Skills = skills,
-                Sliders = sliders,
+                
                 Socials = socials,
                 TagTables = tagTables,
                 Teachers=teachers,

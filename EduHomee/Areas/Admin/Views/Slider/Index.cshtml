@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row">
         <div class="header d-flex justify-content-between mt-3">
-            <h3>Categories</h3>
+            <h3>Slider</h3>
             <div>
                 <a class="btn btn-success" asp-action="Create">Create</a>
             </div>
@@ -47,7 +47,7 @@
                             @slid.Title
                         </td>
                         <td>
-                            @slid.Image
+                            <img style="width:100px; height:100px;" src="~/assets/img/slider/@slid.Image"/>
                         </td>
                         <td>
                             @slid.Description

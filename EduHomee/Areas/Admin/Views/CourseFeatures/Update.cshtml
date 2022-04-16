@@ -1,0 +1,50 @@
+﻿@using EduHomee.Models
+@model (CourseFeatures coursefeatures, List<Course> course)
+<p style="font-size:30px;">Update</p>
+
+<form method="post" style="margin-top:30px;margin-left:30px;" asp-action="Update" asp-area="Admin" asp-controller="CourseDetails">
+    <div class="mb-3">
+        <label class="form-label">Course Title</label>
+        <select asp-for="coursefeatures.CourseId" asp-items="@(new SelectList(Model.course, "Id", "Title"));" class="form-control"></select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursefeatures.Students" class="form-label">About :</label>
+        <input asp-for="coursefeatures.Students" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursefeatures.Start" class="form-label">HowToApply :</label>
+        <input asp-for="coursefeatures.Start" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursefeatures.SkillLevel" class="form-label">Certificate :</label>
+        <input asp-for="coursefeatures.SkillLevel" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursefeatures.Language" class="form-label">CourseCount :</label>
+        <input asp-for="coursefeatures.Language" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursefeatures.Duration" class="form-label">CourseCount :</label>
+        <input asp-for="coursefeatures.Duration" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursefeatures.CourseFee" class="form-label">CourseCount :</label>
+        <input asp-for="coursefeatures.CourseFee" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursefeatures.ClassDuration" class="form-label">CourseCount :</label>
+        <input asp-for="coursefeatures.ClassDuration" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursefeatures.Assesments" class="form-label">CourseCount :</label>
+        <input asp-for="coursefeatures.Assesments" type="text" class="form-control" />
+    </div>
+
+
+    <div class="d-flex">
+        <input type="hidden" asp-for="coursefeatures.Id" />
+        <button class="btn btn-primary">Yenile</button>
+
+        <a asp-action="Index" asp-controller="CourseFeatures" asp-area="Admin" class="btn btn-light">Cancel</a>
+    </div>
+</form>

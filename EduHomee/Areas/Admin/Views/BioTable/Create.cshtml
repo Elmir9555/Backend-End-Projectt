@@ -1,0 +1,36 @@
+﻿@using EduHomee.Models
+@model BioTable
+
+
+
+<div class="container mt-5">
+    <form class="forms-sample" method="post" asp-action="Create" enctype="multipart/form-data">
+        <div style="display:flex;justify-content:space-between">
+            <div class="form-group">
+                <label asp-for="PhoneNumber"></label>
+                <input class="form-control" style="width:300px" asp-for="PhoneNumber">
+                <span class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input class="form-control" type="email" style="width:300px" asp-for="Email">
+                <span class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Adress"></label>
+                <input class="form-control" style="width:300px" asp-for="Adress">
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteLink"></label>
+                <input class="form-control" style="width:300px" asp-for="SiteLink">
+                <span class="text-danger"></span>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <a asp-action="Index" class="btn btn-light">Cancel</a>
+    </form>
+</div>

@@ -1,14 +1,19 @@
 ﻿<Properties StartupConfiguration="{F920991C-8FA9-4BCB-BFD5-EF938929A489}|Default">
   <MonoDevelop.Ide.ItemProperties.EduHomee PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="EduHomee/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="EduHomee/Areas/Admin/Views/Slider/Update.cshtml">
     <Files>
-      <File FileName="EduHomee/Areas/Admin/Controllers/SliderController.cs" Line="1" Column="1" />
-      <File FileName="EduHomee/Areas/Admin/Views/Slider/Index.cshtml" Line="26" Column="34" />
-      <File FileName="EduHomee/Areas/Admin/Views/Slider/Create.cshtml" Line="8" Column="20" />
-      <File FileName="EduHomee/Areas/Admin/Views/Slider/Update.cshtml" Line="15" Column="19" />
-      <File FileName="EduHomee/Areas/Admin/Views/Slider/Detail.cshtml" Line="1" Column="1" />
-      <File FileName="EduHomee/Models/Contact.cs" Line="1" Column="1" />
-      <File FileName="EduHomee/Program.cs" Line="16" Column="1" />
+      <File FileName="EduHomee/ViewModels/HomeViewModel.cs" Line="1" Column="1" />
+      <File FileName="EduHomee/Controllers/HomeController.cs" />
+      <File FileName="EduHomee/Models/Slider.cs" />
+      <File FileName="EduHomee/Models/BaseEntity.cs" />
+      <File FileName="EduHomee/Areas/Admin/Controllers/SliderController.cs" />
+      <File FileName="EduHomee/ViewModels/Admin/SliderVM.cs" />
+      <File FileName="EduHomee/Models/About.cs" Line="13" Column="8" />
+      <File FileName="EduHomee/Areas/Admin/Views/Slider/Create.cshtml" Line="2" Column="16" />
+      <File FileName="EduHomee/Areas/Admin/Views/_ViewImports.cshtml" Line="1" Column="33" />
+      <File FileName="EduHomee/Areas/Admin/Views/Slider/Index.cshtml" Line="45" Column="30" />
+      <File FileName="EduHomee/Areas/Admin/Views/Slider/Detail.cshtml" Line="8" Column="44" />
+      <File FileName="EduHomee/Areas/Admin/Views/Slider/Update.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,14 +24,24 @@
                 <Node name="Admin" expanded="True">
                   <Node name="Controllers" expanded="True" />
                   <Node name="Views" expanded="True">
-                    <Node name="AdminPanel" expanded="True" />
+                    <Node name="CourseDetails" expanded="True" />
+                    <Node name="EventTeacher" expanded="True" />
                     <Node name="Shared" expanded="True" />
-                    <Node name="Slider" expanded="True" />
+                    <Node name="Slider" expanded="True">
+                      <Node name="Update.cshtml" selected="True" />
+                    </Node>
+                    <Node name="TagTable" expanded="True" />
                   </Node>
                 </Node>
               </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Datas" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="Admin" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>

@@ -1,0 +1,102 @@
+﻿
+@using EduHomee.Models
+@model List<Event>
+@{
+    int count = 1;
+    Layout = "_AdminLayout";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="header d-flex justify-content-between mt-3">
+            <h3>Slider</h3>
+            <div>
+                <a class="btn btn-success" asp-action="Create">Create</a>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            Number
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Image
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Location
+                        </th>
+                        <th>
+                            StartDate
+                        </th>
+                        <th>
+                            EndDate
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Settings
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var evt in Model)
+                    {
+                    <tr>
+                        <td>
+                            @count
+                        </td>
+                        <td>
+                            @evt.Title
+                        </td>
+                        <td>
+                            @evt.Image
+                        </td>
+
+                        <td>
+                            @evt.Description
+                        </td>
+                        <td>
+                            @evt.Location
+                        </td>
+                        <td>
+                            @evt.StartDate
+                        </td>
+                        <td>
+                            @evt.EndDate
+                        </td>
+                        <td>
+                            @evt.Date
+                        </td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" asp-action="Detail" asp-route-id="@evt.Id">
+                                <i class="mdi mdi-account-box-outline"></i>
+                            </a>
+                            <a class="btn btn-warning btn-sm" asp-action="Update" asp-route-id="@evt.Id">
+                                <i class="mdi mdi-table-edit"></i>
+                            </a>
+                            <form style="display:inline-block" method="post" asp-action="Delete" asp-route-id="@evt.Id">
+                                <button class="btn btn-danger btn-sm" type="submit">
+                                    <i class="mdi mdi-delete-forever"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                        count++;
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

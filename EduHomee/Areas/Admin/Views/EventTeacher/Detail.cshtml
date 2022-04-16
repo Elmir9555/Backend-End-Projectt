@@ -1,0 +1,19 @@
+﻿@using EduHomee.Models
+@model EventTeacher
+
+
+<form class="form-control">
+    <div class="mb-3">
+        <label class="form-label">Teacher Fullname:</label>
+        <div>
+            @Model.Teacher.Fullname
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Event Description:</label>
+        <p>
+            @Model.Event.Description
+        </p>
+    </div>
+    <a asp-action="Index" asp-controller="EventTeacher" asp-area="Admin" class="btn btn-light">Cancel</a>
+</form>

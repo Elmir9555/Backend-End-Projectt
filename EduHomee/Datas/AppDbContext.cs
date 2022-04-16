@@ -35,6 +35,7 @@ namespace EduHomee.Datas
         public DbSet<TagTable> TagTables { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
 
 
 

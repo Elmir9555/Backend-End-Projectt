@@ -25,6 +25,24 @@
     <None Remove="Areas\Admin\Views\AdminPanel\" />
     <None Remove="Areas\Admin\Views\Shared\" />
     <None Remove="Areas\Admin\Views\Slider\" />
+    <None Remove="Areas\Admin\Views\Service\" />
+    <None Remove="Areas\Admin\Views\About\" />
+    <None Remove="Areas\Admin\Views\Course\" />
+    <None Remove="Areas\Admin\Views\NoticeBoard\" />
+    <None Remove="Areas\Admin\Views\Event\" />
+    <None Remove="Areas\Admin\Views\Testimonial\" />
+    <None Remove="Areas\Admin\Views\Blog\" />
+    <None Remove="Areas\Admin\Views\Social\" />
+    <None Remove="Areas\Admin\Views\BioTable\" />
+    <None Remove="Areas\Admin\Views\Contact\" />
+    <None Remove="Areas\Admin\Views\CourseDetails\" />
+    <None Remove="Areas\Admin\Views\CourseFeature\" />
+    <None Remove="Areas\Admin\Views\TeacherSkill\" />
+    <None Remove="Areas\Admin\Views\Teacher\" />
+    <None Remove="Areas\Admin\Views\Skill\" />
+    <None Remove="Areas\Admin\Views\TagTable\" />
+    <None Remove="Areas\Admin\Views\EventTeacher\" />
+    <None Remove="ViewModels\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.23">
@@ -58,6 +76,24 @@
     <Folder Include="Areas\Admin\Views\AdminPanel\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Admin\Views\Slider\" />
+    <Folder Include="Areas\Admin\Views\Service\" />
+    <Folder Include="Areas\Admin\Views\About\" />
+    <Folder Include="Areas\Admin\Views\Course\" />
+    <Folder Include="Areas\Admin\Views\NoticeBoard\" />
+    <Folder Include="Areas\Admin\Views\Event\" />
+    <Folder Include="Areas\Admin\Views\Testimonial\" />
+    <Folder Include="Areas\Admin\Views\Blog\" />
+    <Folder Include="Areas\Admin\Views\Social\" />
+    <Folder Include="Areas\Admin\Views\BioTable\" />
+    <Folder Include="Areas\Admin\Views\Contact\" />
+    <Folder Include="Areas\Admin\Views\CourseDetails\" />
+    <Folder Include="Areas\Admin\Views\CourseFeatures\" />
+    <Folder Include="Areas\Admin\Views\TeacherSkill\" />
+    <Folder Include="Areas\Admin\Views\Teacher\" />
+    <Folder Include="Areas\Admin\Views\Skill\" />
+    <Folder Include="Areas\Admin\Views\TagTable\" />
+    <Folder Include="Areas\Admin\Views\EventTeacher\" />
+    <Folder Include="ViewModels\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />

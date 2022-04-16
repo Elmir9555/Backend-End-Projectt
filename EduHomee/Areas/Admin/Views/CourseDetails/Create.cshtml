@@ -1,0 +1,34 @@
+﻿@using EduHomee.Models
+@model (CourseDetails coursedetails, List<Course> course)
+
+<p style="font-size:30px;">Create</p>
+
+<form method="post" style="margin-top:30px;padding-top:50px;" asp-action="Create" asp-area="Admin" asp-controller="CourseDetails">
+
+    <div class="mb-3">
+        <label class="form-label">Course Title</label>
+        <select asp-for="coursedetails.CourseId" asp-items="@(new SelectList(Model.course, "Id", "Title"));" class="form-control"></select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursedetails.About" class="form-label">About :</label>
+        <input asp-for="coursedetails.About" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursedetails.HowToApply" class="form-label">HowToApply :</label>
+        <input asp-for="coursedetails.HowToApply" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursedetails.Certificate" class="form-label">Certificate :</label>
+        <input asp-for="coursedetails.Certificate" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="coursedetails.CourseCount" class="form-label">CourseCount :</label>
+        <input asp-for="coursedetails.CourseCount" type="number" class="form-control" />
+    </div>
+    <div class="d-flex">
+        <button class="btn btn-primary">Elave Et</button>
+
+        <a asp-action="Index" asp-controller="CourseDetails" asp-area="Admin" class="btn btn-light">Cancel</a>
+
+    </div>
+</form>

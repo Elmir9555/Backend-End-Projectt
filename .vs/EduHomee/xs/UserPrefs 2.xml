@@ -1,0 +1,48 @@
+﻿<Properties StartupConfiguration="{F920991C-8FA9-4BCB-BFD5-EF938929A489}|Default">
+  <MonoDevelop.Ide.ItemProperties.EduHomee PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EduHomee/Program.cs">
+    <Files>
+      <File FileName="EduHomee/Models/Blog.cs" Line="11" Column="6" />
+      <File FileName="EduHomee/Areas/Admin/Controllers/BlogController.cs" />
+      <File FileName="EduHomee/Areas/Admin/Controllers/SliderController.cs" />
+      <File FileName="EduHomee/Areas/Admin/Views/Blog/Index.cshtml" />
+      <File FileName="EduHomee/Areas/Admin/Views/Blog/Create.cshtml" />
+      <File FileName="EduHomee/Areas/Admin/Views/Blog/Update.cshtml" />
+      <File FileName="EduHomee/Areas/Admin/Views/Blog/Detail.cshtml" />
+      <File FileName="EduHomee/Areas/Admin/Views/Slider/Update.cshtml" />
+      <File FileName="EduHomee/Areas/Admin/Views/Slider/Detail.cshtml" />
+      <File FileName="EduHomee/Areas/Admin/Views/Shared/_AdminLayout.cshtml" />
+      <File FileName="EduHomee/Program.cs" Line="16" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EduHomee" expanded="True">
+            <Node name="EduHomee" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="Views" expanded="True">
+                    <Node name="Blog" expanded="True" />
+                    <Node name="Shared" expanded="True" />
+                    <Node name="Slider" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

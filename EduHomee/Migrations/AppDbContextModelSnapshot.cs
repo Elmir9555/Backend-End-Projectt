@@ -70,6 +70,33 @@ namespace EduHomee.Migrations
                     b.ToTable("BioTables");
                 });
 
+            modelBuilder.Entity("EduHomee.Models.Blog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDelete")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("TeacherName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Blogs");
+                });
+
             modelBuilder.Entity("EduHomee.Models.Contact", b =>
                 {
                     b.Property<int>("Id")
@@ -103,6 +130,12 @@ namespace EduHomee.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CourseDetailId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CourseFeatureId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -431,6 +464,9 @@ namespace EduHomee.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Degree")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");

@@ -1,0 +1,33 @@
+﻿@using EduHomee.Models
+@model Contact
+
+<form class="form-control">
+    <div class="mb-3">
+        <label class="form-label" style="font-size:34px;">Name</label>
+        <div style="width:100%;height:40px;border:1px dashed grey;padding-top:10px;padding-left:20px;">
+            @Model.Name
+        </div>
+    </div>
+    <div class="mt-3">
+        <label class="form-label" style="font-size:34px;">Email</label>
+
+        <div class="mt-1" style="width:100%;height:40px;border:1px dashed grey;padding-top:10px;padding-left:20px;">
+            @Model.Email
+        </div>
+    </div>
+    <div class="mt-3">
+        <label class="form-label" style="font-size:34px;">Email</label>
+
+        <div class="mt-1" style="width:100%;height:40px;border:1px dashed grey;padding-top:10px;padding-left:20px;">
+            @Model.Message
+        </div>
+    </div>
+    <div class="mt-3">
+        <label class="form-label" style="font-size:34px;">Subject</label>
+
+        <div class="mt-1" style="width:100%;height:40px;border:1px dashed grey;padding-top:10px;padding-left:20px;">
+            @Model.Subject
+        </div>
+    </div>
+    <a asp-action="Index" class="btn btn-primary mt-3">Go back</a>
+</form>

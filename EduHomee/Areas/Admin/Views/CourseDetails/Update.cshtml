@@ -1,0 +1,35 @@
+﻿@using EduHomee.Models
+@model (CourseDetails courseDetail, List<Course> course)
+<p style="font-size:30px;">Update</p>
+
+<form method="post" style="margin-top:30px;margin-left:30px;" asp-action="Update" asp-area="Admin" asp-controller="CourseDetails">
+    <div class="mb-3">
+        <label class="form-label">Course Title</label>
+        <select asp-for="courseDetail.CourseId" asp-items="@(new SelectList(Model.course, "Id", "Title"));" class="form-control"></select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="courseDetail.About" class="form-label">About :</label>
+        <input asp-for="courseDetail.About" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="courseDetail.Certificate" class="form-label">Certificate :</label>
+        <input asp-for="courseDetail.Certificate" type="text" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="courseDetail.CourseCount" class="form-label">CourseCount :</label>
+        <input asp-for="courseDetail.CourseCount" type="number" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="courseDetail.HowToApply" class="form-label">How to Apply :</label>
+        <input asp-for="courseDetail.HowToApply" type="text" class="form-control" />
+    </div>
+
+
+    <div class="d-flex">
+        <input type="hidden" asp-for="courseDetail.Id"/>
+        <button class="btn btn-primary">Yenile</button>
+
+        <a asp-action="Index" asp-controller="CourseFeatures" asp-area="Admin" class="btn btn-light">Cancel</a>
+    </div>
+</form>

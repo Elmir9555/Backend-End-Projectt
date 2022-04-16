@@ -14,7 +14,7 @@ namespace EduHomee.ViewModels
         public List<CourseFeatures> CourseFeatures { get; set; }
         public List<Event> Events { get; set; }
         public List<EventTeacher> EventTeachers { get; set; }
-        public NoticeBoard NoticeBoard { get; set; }
+        public List<NoticeBoard> NoticeBoards { get; set; }
         public List<Service> Services { get; set; }
         public List<Skill> Skills{ get; set; }
         public List<Slider> Sliders { get; set; }
@@ -23,6 +23,7 @@ namespace EduHomee.ViewModels
         public List<Teacher> Teachers { get; set; }
         public List<TeacherSkill> TeacherSkills { get; set; }
         public List<Testimonial> Testimonials { get; set; }
+        public List<Blog> Blogs { get; set; }
 
 
     }

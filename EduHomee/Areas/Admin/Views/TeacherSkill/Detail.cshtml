@@ -1,0 +1,46 @@
+﻿@using EduHomee.Models
+@model TeacherSkill
+
+<form class="form-control">
+    <div class="mb-3">
+        <label class="form-label" style="font-size:34px;">Title</label>
+        <div style="width:100%;height:40px;border:1px dashed grey;padding-top:10px;padding-left:20px;">
+            @Model.Teacher.Fullname
+        </div>
+    </div>
+    <div class="mt-3">
+        <label class="form-label" style="font-size:34px;">Description</label>
+
+        <div class="mt-1" style="width:100%;height:40px;border:1px dashed grey;padding-top:10px;padding-left:20px;">
+            @Model.Skill.Name
+        </div>
+    </div>
+    <div class="mt-3">
+        <label class="form-label" style="font-size:34px;">Description</label>
+
+        <div class="mt-1" style="width:100%;height:40px;border:1px dashed grey;padding-top:10px;padding-left:20px;">
+            @Model.Degree
+        </div>
+    </div>
+    <a asp-action="Index" class="btn btn-primary mt-3">Go back</a>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

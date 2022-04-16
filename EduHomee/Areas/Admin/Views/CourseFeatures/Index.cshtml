@@ -1,0 +1,113 @@
+﻿
+@using EduHomee.Models
+@model List<CourseFeatures>
+@{
+    int count = 1;
+    Layout = "_AdminLayout";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="header d-flex justify-content-between mt-3">
+            <h3>CourseFeature</h3>
+            <div>
+                <a class="btn btn-success" asp-action="Create">Create</a>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            Number
+                        </th>
+                        <th>
+                            CourseName
+                        </th>
+                        <th>
+                            ClassDuration
+                        </th>
+                        <th>
+                            Duration
+                        </th>
+                        <th>
+                            CourseFee
+                        </th>
+                        <th>
+                            Language
+                        </th>
+                      
+                        <th>
+                            SkillLevel
+                        </th>
+                        <th>
+                            Start
+                        </th>
+                        <th>
+                           Student
+                        </th>
+                        <th>
+                            Settings
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var feat in Model)
+                    {
+                    <tr>
+                        <td>
+                            @count
+                        </td>
+                        <td>
+                            @feat.Course.Title
+                        </td>
+                        <td>
+                            @feat.Assesments
+                        </td>
+                        <td>
+                            @feat.ClassDuration
+                        </td>
+                        <td>
+                            @feat.Duration
+                        </td>
+                        <td>
+                            @feat.CourseFee
+                        </td>
+                        <td>
+                            @feat.Language
+                        </td>
+                      
+                        <td>
+                            @feat.SkillLevel
+                        </td>
+                        <td>
+                            @feat.Start
+                        </td>
+                        <td>
+                            @feat.Students
+                        </td>
+                        <td>
+                            <a class="btn btn-primary btn-sm" asp-action="Detail" asp-route-id="@feat.Id">
+                                <i class="mdi mdi-account-box-outline"></i>
+                            </a>
+                            <a class="btn btn-warning btn-sm" asp-action="Update" asp-route-id="@feat.Id">
+                                <i class="mdi mdi-table-edit"></i>
+                            </a>
+                            <form style="display:inline-block" method="post" asp-action="Delete" asp-route-id="@feat.Id">
+                                <button class="btn btn-danger btn-sm" type="submit">
+                                    <i class="mdi mdi-delete-forever"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                        count++;
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
