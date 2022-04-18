@@ -1,5 +1,5 @@
 ﻿@using EduHomee.Models
-@model Course
+@model CourseVM
 
 
 
@@ -7,9 +7,9 @@
     <form class="forms-sample" method="post" asp-action="Create" enctype="multipart/form-data">
         <div style="display:flex;justify-content:space-between">
             <div class="form-group">
-                <label asp-for="Image"></label>
-                <input class="form-control" style="width:300px" asp-for="Image">
-                <span class="text-danger"></span>
+                <label asp-for="Photos"></label>
+                <input class="form-control" style="width:300px" asp-for="Photos">
+                <span class="text-danger" asp-validation-for="Photos"></span>
             </div>
 
             <div class="form-group">
@@ -19,8 +19,8 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="Description"></label>
-                <input class="form-control" style="width:300px" asp-for="Description">
+                <label asp-for="Desc"></label>
+                <input class="form-control" style="width:300px" asp-for="Desc">
                 <span class="text-danger"></span>
             </div>
         </div>

@@ -27,7 +27,7 @@ using EduHomee.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"21de731e30c74246e548d1802e4ab144b05005bb", @"/Areas/Admin/Views/TagTable/Create.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5aa753f968db8f5a24fee43bd8a69f651a37c0e2", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"de3bd7e6640f539211a20efbc9f7fcd86ba4b12b", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_TagTable_Create : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<TagTable>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-control"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

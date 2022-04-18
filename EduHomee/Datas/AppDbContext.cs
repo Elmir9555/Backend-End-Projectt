@@ -1,22 +1,17 @@
 ﻿using System;
 using EduHomee.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace EduHomee.Datas
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext:IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext>options):base(options)
         {
         }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.ApplyConfiguration(new CourseConfigurations());
-        //    modelBuilder.ApplyConfiguration(new EventTeacherConfiguration());
-        //    modelBuilder.ApplyConfiguration(new TeacherSkillConfiguration());
-
-        //}
+     
 
         public DbSet<About> Abouts { get; set; }
         public DbSet<BioTable> BioTables { get; set; }

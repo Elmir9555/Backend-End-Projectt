@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Http;
 
 namespace EduHomee.Models
 {
@@ -12,5 +14,9 @@ namespace EduHomee.Models
         public string Image { get; set; }
         [Required(ErrorMessage = "Work Boş keçilə bilməz")]
         public string Work { get; set; }
+
+        [NotMapped]
+        [Required]
+        public IFormFile Photo { get; set; }
     }
 }

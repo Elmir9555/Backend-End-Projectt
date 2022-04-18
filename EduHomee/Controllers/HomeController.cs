@@ -32,7 +32,7 @@ namespace EduHomee.Controllers
             List<Blog> blogs = await _context.Blogs.ToListAsync();
             List<BioTable> bioTables = await _context.BioTables.ToListAsync();
             Contact contact = await _context.Contacts.FirstOrDefaultAsync();
-            List<Course> courses = await _context.Courses.Include(m=>m.CourseFeatures).Include(m=>m.CourseFeatures).ToListAsync();
+            List<Course> courses = await _context.Courses.Include(m => m.CourseFeatures).Include(m => m.CourseDetails).ToListAsync();
             List<CourseDetails> courseDetails = await _context.CourseDetails.ToListAsync();
             List<Event> events = await _context.Events.ToListAsync();
             List<EventTeacher> eventTeachers = await _context.EventTeachers.ToListAsync();           
@@ -56,7 +56,7 @@ namespace EduHomee.Controllers
                 Events = events,
                 BioTables = bioTables,
                 Contact = contact,
-                
+                Blogs=blogs,
                 CourseDetails = courseDetails,
                
                 EventTeachers = eventTeachers,

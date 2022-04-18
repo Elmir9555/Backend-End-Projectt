@@ -15,9 +15,9 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="Image" style="font-size:24px"></label>
-                <input class="form-control" style="width:300px" asp-for="Image">
-                <span class="text-danger"></span>
+                <label asp-for="@Model.photo"></label>
+                <input class="form-control" style="width:300px" asp-for="@Model.photo">
+                <span class="text-danger" asp-validation-for="@Model.photo"></span>
             </div>
 
 

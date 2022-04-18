@@ -13,21 +13,28 @@ namespace EduHomee.Views
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 2 "/Users/elmirustayev/Desktop/EduHomee/EduHomee/Views/_ViewImports.cshtml"
+#line 3 "/Users/elmirustayev/Desktop/EduHomee/EduHomee/Views/_ViewImports.cshtml"
 using EduHomee.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/elmirustayev/Desktop/EduHomee/EduHomee/Views/_ViewImports.cshtml"
+#line 4 "/Users/elmirustayev/Desktop/EduHomee/EduHomee/Views/_ViewImports.cshtml"
 using EduHomee.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "/Users/elmirustayev/Desktop/EduHomee/EduHomee/Views/_ViewImports.cshtml"
+using EduHomee.ViewModels.Account;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f400a24e4f1c1f8dbc87c0f761266a45e781e06b", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"84b4bffe107f9846a2db382e6c99ec38fbc5c410", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"54940363209b2543870324c5bff540708edd7240", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

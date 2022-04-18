@@ -43,6 +43,19 @@
     <None Remove="Areas\Admin\Views\TagTable\" />
     <None Remove="Areas\Admin\Views\EventTeacher\" />
     <None Remove="ViewModels\Admin\" />
+    <None Remove="Utilities\" />
+    <None Remove="Utilities\Helpers\" />
+    <None Remove="ViewModels\Account\" />
+    <None Remove="MailKit" />
+    <None Remove="MimeKit" />
+    <None Remove="Views\Account\" />
+    <None Remove="Views\About\" />
+    <None Remove="Views\Course\" />
+    <None Remove="Views\Event\" />
+    <None Remove="Views\Teacher\" />
+    <None Remove="Views\Blog\" />
+    <None Remove="Views\Contact\" />
+    <None Remove="Views\CourseDetails\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.23">
@@ -56,6 +69,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.23" />
+    <PackageReference Include="MailKit" Version="3.2.0" />
+    <PackageReference Include="MimeKit" Version="3.2.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -94,10 +109,23 @@
     <Folder Include="Areas\Admin\Views\TagTable\" />
     <Folder Include="Areas\Admin\Views\EventTeacher\" />
     <Folder Include="ViewModels\Admin\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Utilities\Helpers\" />
+    <Folder Include="ViewModels\Account\" />
+    <Folder Include="wwwroot\Templates\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Views\About\" />
+    <Folder Include="Views\Course\" />
+    <Folder Include="Views\Event\" />
+    <Folder Include="Views\Teacher\" />
+    <Folder Include="Views\Blog\" />
+    <Folder Include="Views\Contact\" />
+    <Folder Include="Views\CourseDetails\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
     <Content Remove="wwwroot\assets\" />
     <Content Remove="wwwroot\Admin\" />
+    <Content Remove="wwwroot\Templates\" />
   </ItemGroup>
 </Project>
